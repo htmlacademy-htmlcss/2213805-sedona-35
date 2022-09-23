@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Ольга  Пеганова](https://up.htmlacademy.ru/htmlcss/35/user/2213805).
-* Наставник: [Иван Жарков](https://https://github.com/Stalyer).
+* Наставник: [Иван Жарков](https://htmlacademy.ru/profile/id191422).
 
 ---
 
