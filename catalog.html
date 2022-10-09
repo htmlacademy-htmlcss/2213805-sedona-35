@@ -40,10 +40,13 @@
       <h1 class="inner-header-title">Гостиницы Седоны</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link">Главная</a>
+          <a class="breadcrumbs-link-index visually-hidden">Главная</a>
         </li>
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link">Гостиницы</a>
+          <a class="breadcrumbs-link-direction visually-hidden">Стрелка</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link-hotels">Гостиницы</a>
         </li>
       </ul>
   </header>
@@ -122,8 +125,8 @@
       </a>
         <p class="hotel-card-type">Гостиница</p>
         <p class="hotel-card-price">от 4000 Р</p>
-      <a class="hotel-card-button button" href="#">Подробнее</a>
-      <a class="hotel-card-button button" href="#">В избранное</a>
+        <a class="hotel-card-link hotel-card-link-more" href="#">Подробнее</a>
+        <button class="hotel-card-button hotel-card-button-1" type="button">В избранное</button>
         <span class="visually-hidden">"Четыре звезды"</span>
         <p class="hotel-card-rank">Рейтинг:8,5</p>
       </li>
@@ -134,8 +137,8 @@
         </a>
           <p class="hotel-card-type">Гостиница</p>
           <p class="hotel-card-price">от 5000 Р</p>
-        <a class="hotel-card-button button" href="#">Подробнее</a>
-        <a class="hotel-card-button button" href="#">В избранное</a>
+          <a class="hotel-card-link hotel-card-link-more" href="#">Подробнее</a>
+          <button class="hotel-card-button hotel-card-button-2" type="button">В избранном</button>
          <span class="visually-hidden">"Четыре звезды"</span>
           <p class="hotel-card-rank">Рейтинг:9,2</p>
       <li class="hotel-card">
@@ -145,8 +148,8 @@
         </a>
           <p class="hotel-card-type">Гостиница</p>
           <p class="hotel-card-price">от 2500 Р</p>
-        <a class="hotel-card-button button" href="#">Подробнее</a>
-        <a class="hotel-card-button button" href="#">В избранное</a>
+          <a class="hotel-card-link hotel-card-link-more" href="#">Подробнее</a>
+          <button class="hotel-card-button hotel-card-button-3" type="button">В избранное</button>
         <span class="visually-hidden">"Три звезды"</span>
           <p class="hotel-card-rank">Рейтинг:6,9</p>
         <li class="hotel-card">
@@ -156,8 +159,8 @@
         </a>
           <p class="hotel-card-type">Гостиница</p>
           <p class="hotel-card-price">от 1500 Р</p>
-        <a class="hotel-card-button button" href="#">Подробнее</a>
-        <a class="hotel-card-button button" href="#">В избранное</a>
+          <a class="hotel-card-link hotel-card-link-more" href="#">Подробнее</a>
+          <button class="hotel-card-button hotel-card-button-4" type="button">В избранное</button>
          <span class="visually-hidden">"Две звезды"</span>
           <p class="hotel-card-rank">5,0</p>
         </ul>
@@ -171,18 +174,21 @@
             <a class="pagination-link pagination-current">1</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link">2</a>
+            <a class="pagination-link pagination-link-choice">2</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link">3</a>
+            <a class="pagination-link pagination-link-choice">3</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link">4</a>
+            <a class="pagination-link pagination-link-choice">4</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link pagination-next" href="#">
             <span class="visually-hidden">Следующая страница</span>
             </a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link pagination-link-choice">10</a>
           </li>
         </ul>
     </section>
@@ -190,7 +196,7 @@
   <footer>
     <section class="newsletter">
       <h2 class="page-footer-title">Подпишитесь на рассылку</h2>
-      <p class="newsletter-text">Только полезная информация и никакого спама, честное бойскаутское!"></p>
+      <p class="newsletter-text">Только полезная информация и никакого спама, честное бойскаутское!"</p>
       <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
         <label for="newsletter-email">Email</label>
         <input class="field" type="email" placeholder="Ваш e-mail" name="newsletter-email" id="newsletter-email">
