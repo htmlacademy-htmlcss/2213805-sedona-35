@@ -71,14 +71,11 @@ body{
 }
 
 .main-index-image{
-  background-color: #ffffff;
-  background-image: url("../images/main-bg-image.jpg");
+  background-color: #82B3D3;
+  background-image: url(../images/main-bg-image.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
   display: block;
-}
-
-.page-container{
 }
 
 .main-index-name{
@@ -139,7 +136,8 @@ body{
   font-weight: 400;
 }
 
-.advantages-item-square{
+.advantages-item-square,
+.advantages-item-quiet{
   color: #000000;
   background-color: rgba(130, 179, 211, 0.12);
   font-size: 18px;
@@ -175,14 +173,6 @@ body{
 .advantages-item-road{
   color: #000000;
   background-color: rgba(130, 179, 211, 0.2);
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  font-weight: 400;
-}
-
-.advantages-item-quiet{
-  color: #000000;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
@@ -236,37 +226,17 @@ body{
 .newsletter{
   text-align: center;
 }
-.page-footer-title{
-  font-family: "PT Sans",
-  sans-serif;
-  font-style: bold;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 36px;
-  color: #000000;
-  text-transform: uppercase;
-  text-align: center;
-}
 
 .newsletter-title{
   font-family: "PT Sans",
   sans-serif;
-  font-style: bold;
   font-size: 30px;
-  font-weight: 700;
   line-height: 36px;
-  color: #ffffff;
+  font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
 }
-
-.newsletter-text-catalog{
-  font-family: "PT Sans",
-  sans-serif;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
-  color: #000000;
+.newsletter-index .newsletter-title{
+  color: #ffffff;
 }
 
 .newsletter-text{
@@ -275,11 +245,13 @@ body{
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
+}
+.newsletter-index .newsletter-text{
   color: #ffffff;
 }
 
 .newsletter-index{
-  background-color: #ffffff;
+  background-color: rgba(130, 179, 211, 0.3);
   background-image: url("../images/bg-newsletter-image.jpeg");
   margin-bottom: 30px;
   padding: 20px;
@@ -290,6 +262,7 @@ body{
 .newsletter-button{
   vertical-align:middle;
   background-color:#82B3D3;
+  color: #ffffff;
   width: 232px;
   height: 52px;
   font-family: "PT Sans",
@@ -348,6 +321,7 @@ body{
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+  color: #ffffff;
 }
 .breadcrumbs-link-index::after{
   content:url("../images/house-to-hotel-vector.svg");
