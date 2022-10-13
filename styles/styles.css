@@ -22,8 +22,14 @@
   format("woff2");
   font-display: swap;
 }
-
+html{
+  height: 100%;
+}
 body{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans",
   sans-serif;
   font-size: 16px;
@@ -40,6 +46,22 @@ body{
   text-decoration: none;
   display: flex;
   margin: 0 auto;
+  width: 1200px;
+  margin: auto;
+}
+.navigation-logo{
+  margin: 0;
+  width: 138px;
+  display: block;
+}
+.navigation-list{
+  margin: 0;
+  padding: 0;
+  width: 620px;
+}
+.navigation-list .navigation-user{
+  max-width: 280px;
+  margin-left: auto;
 }
 
 .navigation-link,
@@ -55,7 +77,7 @@ body{
 }
 .navigation-user{
   margin-left: auto;
-  max-width: 410;
+  max-width: 320;
 }
 
 .navigation-link-want{
@@ -68,6 +90,13 @@ body{
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
+}
+.main-container{
+  flex-grow: 1;
+}
+.page-container{
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .main-index-picture{
@@ -95,6 +124,28 @@ body{
   font-size: 22px;
   line-height: 26px;
 }
+.advantages-list{
+  margin: 0;
+  padding: 0;
+  display:flex;
+  flex-wrap: wrap;
+  width: 1200px;
+  list-style-type: none;
+}
+.advantages-item{
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  min-height: 384px;
+}
+.advantages-image{
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 800px;
+  height: 384px;
+  vertical-align: middle;
+}
 
 .advantages-title{
   font-family: "PT Sans",
@@ -105,12 +156,29 @@ body{
   line-height: 28px;
   text-transform: uppercase;
 }
-.advantage-description{
+.advantages-description{
   font-family: "PT Sans",
   sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
+  margin: 0;
+  padding: 0;
+}
+.services-list{
+  margin: 0;
+  padding: 0;
+  display:flex;
+  width: 1200px;
+  height: 384px;
+  list-style-type: none;
+}
+.services-item{
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  height: 384px;
 }
 .services-name{
   font-size: 30px;
@@ -189,7 +257,18 @@ body{
   text-align: center;
   font-weight: 400;
 }
-
+.newsletter{
+  display: block;
+  margin: 0;
+  padding: 0;
+  align-content: center;
+}
+.reservation{
+  display: block;
+  margin: 0;
+  padding: 0;
+  align-content: center;
+}
 .reservation-title{
   font-family: "PT Sans",
   sans-serif;
@@ -209,7 +288,6 @@ body{
 }
 
 .button-reservation{
-  vertical-align:middle;
   color: #ffffff;
   background-color:#756157;
   border-style: none;
@@ -273,8 +351,13 @@ body{
   text-transform: uppercase;
 }
 
-.footer{
-  width: 1200px;
+.social-networks-list{
+  max-width: 142px;
+  margin-left: auto;
+}
+.htmlacademy-link{
+  max-width: 115px;
+  margin-right: 70px;
 }
 .social-networks-item{
   margin: 0;
@@ -288,13 +371,12 @@ body{
   font-size: 40px;
   font-weight: 700;
   line-height: 40px;
-  width: 720px;
+  width: 331px;
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
-}
-.htmlacademy-link{
-  width: 115px;
+  padding-left: 20px;
+  padding-right: 30px;
 }
 
 .selection-panel{
@@ -439,4 +521,12 @@ body{
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
+}
+.footer-contacts {
+  display: flex;
+  width: 1060px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  margin-left: 70px;
+  margin-right: 70px;
 }
