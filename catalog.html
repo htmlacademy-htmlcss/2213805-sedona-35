@@ -35,7 +35,7 @@
       </ul>
     </nav>
   </header>
-  <main class="main-inner">
+  <main class="main-container main-inner">
     <div class="selection-panel">
     <header class="inner-header">
       <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -49,7 +49,7 @@
       </ul>
   </header>
    <section class="catalog">
-    <h2 class="catalog-title">Список вариантов</h2>
+    <h2 class="catalog-title visually-hidden" hidden>Список вариантов</h2>
     <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
       <fieldset class="catalog-filter-group">
         <legend class="catalog-filter-title">Инфраструктура</legend>
@@ -85,7 +85,9 @@
           </li>
         </ul>
         </fieldset>
+        <div class="catalog-sorting-container">
         <label>
+          <p class="hotel-price">Стоимость,Р</p>
           <input type="number" name="min-price" min="0" max="9000" value="0">
           <span>от</span>
         </label>
@@ -95,6 +97,7 @@
         </label>
       <button class="button button-dark" type="submit">Применить</button>
       <button class="button button-light" type="reset">Сбросить</button>
+        </div>
     </form>
     </section>
     </div>
@@ -200,7 +203,8 @@
         </button>
       </form>
     </section>
-    <section class="footer-contacts">
+    <div class="contacts-container">
+      <section class="footer-contacts">
       <ul class="social-networks-list">
         <li class="social-networks-item">
           <a class="button" href="https://vk.com/htmlacademy">

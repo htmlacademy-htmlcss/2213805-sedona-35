@@ -55,11 +55,41 @@ body{
   display: block;
 }
 .navigation-list{
+  display: flex;
   margin: 0;
   padding: 0;
   width: 620px;
+  list-style-type: none;
 }
-.navigation-list .navigation-user{
+.navigation-link-main{
+  display: flex;
+  width: 100px;
+  height: 64px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.navigation-link-about{
+  display: flex;
+  width: 114px;
+  height: 64px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.navigation-link-hotels{
+  display: flex;
+  width: 125px;
+  height: 64px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.navigation-user{
+  display: flex;
   max-width: 280px;
   margin-left: auto;
 }
@@ -263,10 +293,14 @@ body{
   padding: 0;
   align-content: center;
 }
-.reservation{
-  display: block;
-  margin: 0;
-  padding: 0;
+.reservation-container{
+  display: flex;
+  width: 592px;
+  height: 214px;
+  margin-top: 96px;
+  margin-bottom: 96px;
+  margin-left: 304px;
+  margin-right: 304px;
   align-content: center;
 }
 .reservation-title{
@@ -285,6 +319,7 @@ body{
   line-height: 26px;
   font-weight: 400;
   color: #333333;
+  text-align: center;
 }
 
 .button-reservation{
@@ -350,47 +385,66 @@ body{
   line-height: 36px;
   text-transform: uppercase;
 }
+.contacts-container{
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
 
 .social-networks-list{
+  display: flex;
   max-width: 142px;
-  margin-left: auto;
+  margin-right: 41px;
+  margin-top: 45px;
+  margin-bottom: 35px;
+  margin-left: 70px;
+  margin-right: 41px;
+
 }
 .htmlacademy-link{
+  display: flex;
   max-width: 115px;
   margin-right: 70px;
+  margin-left: 41px;
+  margin-top: 48px;
+  margin-bottom: 38px;
 }
 .social-networks-item{
+  display: flex;
   margin: 0;
   padding: 0;
-  width: 142;
+  width: 142px;
   color:#000000;
   background-color: #ffffff;
   text-decoration: none;
 }
 .contacts-phone{
   font-size: 40px;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 40px;
   width: 331px;
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
-  padding-left: 20px;
-  padding-right: 30px;
+  margin-top: 40px;
+  margin-bottom: 30px;
 }
 
-.selection-panel{
-  background-image: url("../images/bg-catalog-image.jpg");
-  background-size: 1200px 412px;
-  background-repeat: no-repeat;
-  background-color: #82B3D3;
-}
 .inner-header-title {
   line-height: 78px;
   font-size: 60px;
   font-weight: 700;
-  text-transform: uppercase;
   color: #ffffff;
+  padding: 0;
+  width: 494px;
+  height: 78px;
+}
+.breadcrumbs{
+  display: flex;
+  width: 114px;
+  height: 21px;
 }
 .breadcrumbs-link-index{
   background-image: url(../images/house-main-vector.svg);
@@ -410,6 +464,25 @@ body{
   width: 7px;
   height: 10px;
 }
+.selection-panel{
+  display: flex;
+  background-image: url("../images/bg-catalog-image.jpg");
+  background-size: 1200px 412px;
+  background-repeat: no-repeat;
+  background-color: #82B3D3;
+  width: 1200px;
+  list-style-type: none;
+}
+
+.catalog{
+    display: flex;
+    list-style-type: none;
+}
+.catalog-filter{
+  min-width: 150px;
+  margin-left: 70px;
+  justify-content: center;
+}
 .catalog-filter-title{
   font-size: 20px;
   font-weight: 700;
@@ -419,6 +492,10 @@ body{
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
+  color: #ffffff;
+  list-style-type: none;
+}
+.hotel-price{
   color: #ffffff;
 }
 .button-light {
@@ -437,11 +514,26 @@ body{
   color: #000000;
   background-color: #ffffff;
 }
+.hotel-list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 1060px;
+  height: 896px;
+  align-items: center;
+  justify-content: center;
+}
+.hotel-card{
+  width: 340px;
+  height: 438px;
+  padding: 0;
+  margin: 0;
+}
 .hotel-card-title{
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   color: #000000;
+
 }
 .hotel-card-price,
 .hotel-card-type{
@@ -487,6 +579,14 @@ body{
   line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
+}
+.pagination{
+  display: flex;
+}
+.pagination-item{
+  width: 60px;
+  height: 60px;
+  list-style-type: none;
 }
 .pagination-link{
   font-size: 20px;
