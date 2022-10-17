@@ -35,7 +35,8 @@
       </ul>
     </nav>
   </header>
-  <main class="main-inner">
+  <main class="main-container main-inner">
+    <div class="page-container">
     <div class="selection-panel">
     <header class="inner-header">
       <h1 class="inner-header-title">Гостиницы Седоны</h1>
@@ -49,7 +50,7 @@
       </ul>
   </header>
    <section class="catalog">
-    <h2 class="catalog-title">Список вариантов</h2>
+    <h2 class="catalog-title visually-hidden" hidden>Список вариантов</h2>
     <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
       <fieldset class="catalog-filter-group">
         <legend class="catalog-filter-title">Инфраструктура</legend>
@@ -85,7 +86,10 @@
           </li>
         </ul>
         </fieldset>
-        <label>
+        <div class="catalog-sorting-container">
+          <fieldset class="catalog-filter-group">
+            <legend class="catalog-filter-title">Стоимость,Р</legend>
+            <label>
           <input type="number" name="min-price" min="0" max="9000" value="0">
           <span>от</span>
         </label>
@@ -93,8 +97,12 @@
           <input type="number" name="max-price" min="1" max="9000" value="9000">
           <span>до</span>
         </label>
+          </fieldset>
+            <div>
       <button class="button button-dark" type="submit">Применить</button>
       <button class="button button-light" type="reset">Сбросить</button>
+            </div>
+        </div>
     </form>
     </section>
     </div>
@@ -105,15 +113,23 @@
       <option value="cheap">Сначала дешёвые</option>
       <option value="expensive">Сначала дорогие</option>
     </select>
+    <ul class="show-options">
+      <li class="show-options-item">
     <a href="#" class="button-light">
       <span class="visually-hidden">Показать список</span>
     </a>
+      </li>
+      <li class="show-options-item">
     <a href="#" class="button-light">
       <span class="visually-hidden">Показать карточки</span>
     </a>
+      </li>
+      <li class="show-options-item">
     <a href="#" class="button-light">
       <span class="visually-hidden">Обычный список</span>
     </a>
+      </li>
+    </ul>
     </section>
   <section class="hotels-panel">
     <ul class="hotel-list">
@@ -186,8 +202,10 @@
           </li>
         </ul>
     </section>
+    </div>
   </main>
   <footer>
+    <div class="container">
     <section class="newsletter">
       <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
       <p class="newsletter-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
@@ -199,7 +217,9 @@
         </button>
       </form>
     </section>
-    <section class="footer-contacts">
+    </div>
+    <div class="contacts-container">
+      <section class="footer-contacts">
       <ul class="social-networks-list">
         <li class="social-networks-item">
           <a class="button" href="https://vk.com/htmlacademy">
@@ -226,6 +246,7 @@
     <a class="htmlacademy-link" href="https://htmlacademy.ru/">
     <img class="academy-image" src="images/social-networks/logo-academy.svg" width="115" height="34" alt="Лого академии">
     </a>
+    </div>
     </footer>
   </body>
 </html>
