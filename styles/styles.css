@@ -157,7 +157,6 @@ body{
 }
 .advantages-item{
   display: flex;
-  height: 384px;
 }
 
 .advantage-description-item{
@@ -484,10 +483,7 @@ body{
   font-weight: 400;
   color: #ffffff;
 }
-.sorting-container {
-  color: #000000;
-  background-color: #ffffff;
-}
+
 .hotel-list{
   align-items: center;
   justify-content: center;
