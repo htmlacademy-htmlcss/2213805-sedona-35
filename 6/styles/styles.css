@@ -128,7 +128,6 @@ body{
   background-color: #82B3D3;
   background-size: 100% auto;
   background-repeat: no-repeat;
-  display: block;
 }
 
 .main-index-name{
@@ -163,7 +162,6 @@ body{
 
 .advantage-description-item{
   width: 400px;
-  height: 384px;
 }
 
 .advantages-title{
@@ -281,9 +279,7 @@ body{
   justify-content: center;
   text-align: center;
 }
-.reservation-container{
-  justify-content: center;
-}
+
 .reservation-title{
   font-family: "PT Sans",
   sans-serif;
@@ -450,7 +446,6 @@ body{
 
 .catalog{
     display: flex;
-    list-style-type: none;
 }
 .catalog-filter{
   display: flex;
