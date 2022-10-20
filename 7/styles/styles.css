@@ -64,27 +64,22 @@ body{
 .navigation-link,
 .navigation-link-current{
   display: block;
-  padding: 20px 16px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   color: #000000;
   text-decoration: none;
 }
-
+.navigation-item{
+  margin: 20px 16px;
+}
 .navigation-link-main{
-  display: flex;
-  width: 100px;
   height: 64px;
 }
 .navigation-link-about{
-  display: flex;
-  width: 114px;
   height: 64px;
 }
 .navigation-link-hotels{
-  display: flex;
-  width: 125px;
   height: 64px;
 }
 .navigation-user{
@@ -172,9 +167,6 @@ body{
   font-weight: 400;
   font-size: 22px;
   line-height: 26px;
-}
-.visually-hidden{
-  display: none;
 }
 .advantages-list{
   margin: 0;
@@ -360,8 +352,9 @@ body{
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 96px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
+  margin-left: 35px;
+  margin-right: 35px;
 }
 .newsletter-index .newsletter-title{
   color: #ffffff;
@@ -386,17 +379,6 @@ body{
   text-align: center;
 }
 
-.newsletter-title{
-  font-family: "PT Sans",
-  sans-serif;
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.newsletter-index .newsletter-title{
-  color: #ffffff;
-}
 .newsletter-text{
   font-family: "PT Sans",
   sans-serif;
@@ -433,31 +415,24 @@ body{
 
 .contacts-container{
   display: flex;
+  width: 1060px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 40px 70px 30px 70px;
 }
 .social-networks-list{
   display: flex;
-  max-width: 142px;
-  margin-right: 41px;
-  margin-top: 45px;
-  margin-bottom: 35px;
-  margin-left: 70px;
-  margin-right: 41px;
-
+  width: 180px;
+  padding: 0;
+  margin: 0;
 }
 .htmlacademy-link{
   max-width: 115px;
-  margin-right: 70px;
-  margin-left: 41px;
-  margin-top: 48px;
-  margin-bottom: 38px;
 }
 .social-networks-item{
   display: flex;
   margin: 0;
   padding: 0;
-  width: 142px;
   color:#000000;
   background-color: #ffffff;
   text-decoration: none;
@@ -466,12 +441,9 @@ body{
   font-size: 40px;
   font-weight: 400;
   line-height: 40px;
-  width: 331px;
   text-transform: uppercase;
   color: #000000;
   text-decoration: none;
-  margin-top: 40px;
-  margin-bottom: 30px;
 }
 .page-container{
   padding-top: 35px;
@@ -488,8 +460,7 @@ body{
 
 }
 .breadcrumbs{
-  display: flex;
-  width: 114px;
+  display: block;
   justify-content: space-around;
   list-style-type: none;
   padding-left: 70px;
@@ -528,11 +499,12 @@ body{
 }
 
 .catalog{
-    display: flex;
+  display: flex;
 }
 .catalog-filter{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-grow: 1;
 }
 .catalog-filter-title{
   font-size: 20px;
@@ -581,6 +553,12 @@ body{
 .control{
   font-weight: 400;
   color: #ffffff;
+}
+.show-options{
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 .show-option-item{
   display: block;
@@ -676,13 +654,13 @@ body{
   margin-right: 8px;
 }
 .pagination-link{
-  display: block;
-  box-sizing: border-box;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
   width: 60px;
   height: 60px;
+  padding-top: 11px;
+  text-align: center;
 }
 .pagination-current{
   background-color: #F2F2F2;
@@ -713,9 +691,4 @@ body{
 }
 .footer-contacts {
   display: flex;
-  width: 1060px;
-  margin-top: 40px;
-  margin-bottom: 30px;
-  margin-left: 70px;
-  margin-right: 70px;
 }
