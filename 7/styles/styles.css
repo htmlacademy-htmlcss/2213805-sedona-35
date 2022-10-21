@@ -58,7 +58,7 @@ body{
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  width: 620px;
+  max-width: 620px;
   list-style-type: none;
 }
 .navigation-link,
@@ -73,15 +73,7 @@ body{
 .navigation-item{
   margin: 20px 16px;
 }
-.navigation-link-main{
-  height: 64px;
-}
-.navigation-link-about{
-  height: 64px;
-}
-.navigation-link-hotels{
-  height: 64px;
-}
+
 .navigation-user{
   display: flex;
   margin: 0;
@@ -136,13 +128,19 @@ body{
   overflow:hidden;
 }
 .main-container {
+  display: flex;
   flex-grow: 1;
-  padding-top: 35px;
-  padding-bottom: 60px;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+.main-inner{
+  margin: 0;
 }
 .page-container{
   width: 1200px;
   margin: 0 auto;
+  padding: 0;
 }
 .main-index-image{
   background-image: url(../images/main-bg-image.jpg);
@@ -446,28 +444,25 @@ body{
   text-decoration: none;
 }
 .page-container{
-  padding-top: 35px;
+  padding-top: 0;
+  margin: 0;
 }
 .inner-header-title {
-  margin-top: 35px;
-  margin-bottom: 16px;
+  display: flex;
+  justify-content: flex-start;
   line-height: 78px;
   font-size: 60px;
   font-weight: 700;
   color: #ffffff;
-  margin-left: 70px;
-  margin-right: 635px;
-
 }
 .breadcrumbs{
-  display: block;
-  justify-content: space-around;
+  display: flex;
+  justify-content: flex-start;
   list-style-type: none;
-  padding-left: 70px;
+  padding-left: 8px;
   margin: 0;
 }
 .breadcrumbs-item{
-  display: block;
   padding: 0 0 2px 0;
 }
 .breadcrumbs-link-index{
@@ -497,7 +492,9 @@ body{
   background-color: #82B3D3;
   list-style-type: none;
 }
-
+.inner-header{
+  margin: 0 auto;
+}
 .catalog{
   display: flex;
 }
@@ -523,8 +520,11 @@ body{
 }
 .sorting-hotels{
   display: flex;
-  padding: 50px 70px 60px 70px;
+  padding: 0;
+  margin: 0 auto;
+  justify-content: space-evenly;
 }
+
 .button-light {
   color: #ffffff;
   background-color: transparent;
@@ -568,20 +568,36 @@ body{
 }
 
 .hotel-list{
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   flex-wrap: wrap;
   list-style-type: none;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   margin-bottom: 20px;
   align-items: center;
 }
 .hotel-card{
-  width: 340px;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  /* //flex-direction: column; */
+  flex-basis: 340px;
+  box-sizing: border-box;
+  padding: 20px;
   margin-bottom: 16px;
+  flex-grow: 1;
+  min-height: 438px;
+}
+.hotel-card:not(:last-child) {
   margin-right: 20px;
+}
+
+.hotel-card-column{
+  display: flex;
+  flex-direction: column;
+}
+.hotel-card-column:nth-child(2){
+ margin-right: 20px;
 }
 .hotel-card:nth-child(3n) {
   margin-right: 0;
@@ -599,11 +615,13 @@ body{
   line-height: 21px;
 }
 .hotel-card-button{
-  vertical-align:middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #ffffff;
   border-style: none;
   width: 140px;
-  height: 36px;
+  min-height: 36px;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
@@ -617,26 +635,47 @@ body{
 .hotel-card-button-poco{
   background-color: #7DB54F;
 }
+.hotel-card-main{
+  text-decoration: none;
+}
 .hotel-card-image{
   display: block;
 }
 .hotel-card-link{
-  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
-}
-
-.hotel-card-link-more{
-  vertical-align:middle;
   color: #ffffff;
-  background-color: #756157;
   border-style: none;
   width: 140px;
-  height: 36px;
+  min-height: 36px;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
+}
+.hotel-card-rank{
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8px;
+}
+.hotel-card-link-more{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
+  border-style: none;
+  width: 140px;
+  min-height: 36px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #756157;
 }
 .pagination{
   display: flex;
@@ -661,6 +700,7 @@ body{
   height: 60px;
   padding-top: 11px;
   text-align: center;
+  box-sizing: border-box;
 }
 .pagination-current{
   background-color: #F2F2F2;
@@ -684,6 +724,7 @@ body{
   text-transform: uppercase;
 }
 .search-results-title{
+  margin: 0;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
