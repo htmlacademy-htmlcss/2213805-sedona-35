@@ -49,11 +49,13 @@ body{
   min-height: 64px;
 }
 .navigation-logo{
+  position: absolute;
   margin: 0;
   width: 138px;
   height: 70px;
   display: block;
-  margin-bottom: -12px;;
+  margin-bottom: -12px;
+  padding-left: 40px;
   z-index: 2;
 }
 .navigation-list{
@@ -63,6 +65,7 @@ body{
   padding: 0;
   max-width: 620px;
   list-style-type: none;
+  padding-left: 238px;
 }
 .navigation-link,
 .navigation-link-current{
@@ -73,7 +76,7 @@ body{
   color: #000000;
   text-decoration: none;
 }
-.navigation-link:hover{
+.navigation-item:hover{
   border-bottom: 2px solid rgba(117, 98, 87, 1);
 }
 
@@ -82,7 +85,7 @@ body{
 }
 .navigation-item{
   display: flex;
-  padding: 20px 16px;
+  padding: 20px 16px 16px 16px;
 }
 
 .navigation-user{
@@ -99,7 +102,7 @@ body{
 }
 .navigation-link-search{
   justify-content: center;
-  padding: 22px 12px;
+  padding: 18px 12px;
 }
 .count-item{
   position: absolute;
@@ -410,6 +413,10 @@ body{
   margin-top: 0;
   padding-bottom: 104px;
 }
+.newsletter-form{
+  display: flex;
+  justify-content: center;
+}
 .newsletter-title{
   font-family: "PT Sans",
   sans-serif;
@@ -452,7 +459,6 @@ body{
 }
 .newsletter-form{
   min-width: 452px;
-  height: 52px;
 }
 .field{
   margin: 0;
@@ -481,6 +487,16 @@ body{
 .field-catalog{
  background-color: #F2F2F2;
 }
+.button-light {
+  color: #ffffff;
+  background-color: transparent;
+  padding: 8px 50px;
+}
+.button-dark{
+  color: #ffffff;
+  background-color: #82B3D3;
+  padding: 8px 50px;
+}
 .button-blue:hover{
   background-color:#68A2CA;
 }
@@ -504,6 +520,18 @@ body{
 }
 .button-green:disabled{
   background-color: #E5E5E5;
+}
+.button-transparent:hover{
+  background-color: transparent;
+  opasity: 60%;
+}
+.button-transparent:focus{
+  background-color: transparent;
+  border: 2px solid #83B3D3;
+}
+.button-transparent:disabled{
+  color: #FFFFFF;
+  opacity: 10%;
 }
 .contacts-container{
   display: flex;
@@ -530,28 +558,28 @@ body{
   width: 52px;
   height: 40px;
 }
-.social-link-icon{
+.social-link{
   fill:#83B3D3;
 }
-.social-link-icon:hover{
+.social-link:hover .social-link-icon{
   fill: #68A2CA;
 }
-.social-link-icon:focus{
+.social-link:focus .social-link-icon{
   fill: #68A2CA;
 }
-.social-link-icon:active{
+.social-link:active .social-link-icon{
   fill: rgba(104, 162, 202, 0.3);
 }
-.academy-icon{
+.htmlacademy-link{
   fill:rgba(0, 0, 0, 1);
 }
-.academy-icon:hover{
+.htmlacademy-link:hover .academy-link-icon{
   fill: #756157;
 }
-.academy-icon:focus{
+.htmlacademy-link:focus .academy-link-icon{
   fill: #756157;
 }
-.academy-icon:active{
+.htmlacademy-link:active .academy-link-icon{
   fill: rgba(117, 97, 87, 0.3);
 }
 .contacts-phone{
@@ -587,7 +615,9 @@ body{
   padding: 0;
   margin: 0;
 }
-
+.breadcrumbs-item-home{
+  position: relative;
+}
 .breadcrumbs-item-home::after{
   display: block;
   position: absolute;
@@ -596,7 +626,8 @@ body{
   background-repeat: no-repeat;
   width: 7px;
   height: 10px;
-  left: 100px;
+  right: -15px;
+  top: 7px;
 }
 
 .breadcrumbs-link-hotels{
@@ -608,11 +639,12 @@ body{
 }
 .breadcrumbs-link-index{
   display: block;
+  background-position: center;
   background-image: url("../images/house-main-vector.svg");
   background-repeat: no-repeat;
-  width: 12px;
-  height: 12px;
-  position: relative;
+  width: 13px;
+  height: 15px;
+  margin-top: 5px;
 }
 .selection-panel{
   background-image: url("../images/bg-catalog-image.jpg");
@@ -708,16 +740,6 @@ width: 85px;
   justify-content: space-evenly;
 }
 
-.button-light {
-  color: #ffffff;
-  background-color: transparent;
-  padding: 8px 50px;
-}
-.button-dark{
-  color: #ffffff;
-  background-color: #82B3D3;
-  padding: 8px 50px;
-}
 .select-control{
   display: flex;
   min-width: 292px;
