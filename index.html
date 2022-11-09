@@ -122,7 +122,7 @@
         <p class="newsletter-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="newsletter-email">Email</label>
-          <input class="field" type="email" placeholder="Ваш e-mail" name="newsletter-email" id="newsletter-email">
+          <input class="newsletter-field" type="email" placeholder="Ваш e-mail" name="newsletter-email" id="newsletter-email">
           <button class="button newsletter-button button-blue" type="submit">
             Подписаться
           </button>
@@ -166,5 +166,67 @@
       </div>
       </div>
       </footer>
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-search">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+          <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="search-form-wrapper">
+              <div class="search-date">
+              <label class="search-form-label date-label" for="arrival-date">Дата заезда</label>
+              <input class="data-field field" type="text" id="arrival-date" name="arrival-date" value="27 апреля 2020" placeholder="Укажите дату" required>
+              </div>
+              <span class="error-message">Мы не можем отправить вас в прошлое</span>
+            </div>
+            <div class="search-form-wrapper date-wrapper">
+              <div class="search-date">
+              <label class="search-form-label date-label" for="departure-date">Дата выезда</label>
+              <input class="data-field field" type="text" id="departure-date" name="departure-date" value="1 сентября 2023" placeholder="Укажите дату" required>
+              </div>
+              <span class="confirm-message">На эти даты есть свободные номера. Пока есть</span>
+            </div>
+            <div class="quantity quantity-adults">
+              <div class="guest-form">
+              <label class="search-form-label adults" for="adults">Взрослые:</label>
+              <input class="amount-form-field field" type="text" step="1" id="adults" name="adults-amount" value="2" required>
+              </div>
+              <button class="search-button-min" type="button">
+                <span class="visually-hidden">Кнопка уменьшающая количество взрослых.</span>
+              </button>
+                <button class="search-button-max" type="button">
+                <span class="visually-hidden"> Кнопка увеличивающая количество взрослых.</span>
+              </button>
+            </div>
+            <div class="quantity quantity-children">
+              <div class="guest-form">
+              <label class="search-form-label children" for="children">Дети:</label>
+               <input class="amount-form-field field" type="text" step="1" id="children" name="children-amount" value="2" required>
+              </div>
+              <span class="search-form-label form-label-icon">
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" id="tooltip-text" role="tooltip" id="tooltip-children">
+                  <svg class="tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="13" cy="13" r="13" fill="#83B3D3"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7H14V9H12V7ZM14 19H12V10H14V19Z" fill="white"/>
+                    </svg>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                </span>
+                </span>
+               <button class="search-button-min" type="button">
+                <span class="visually-hidden">Кнопка уменьшающая количество детей.</span>
+                </button>
+              <button class="search-button-max" type="button">
+              <span class="visually-hidden"> Кнопка увеличивающая количество детей.</span>
+              </button>
+              </div>
+            <button class="search-form-button" type="submit">Найти</button>
+          </form>
+        </section>
+      </div>
+    </div>
   </body>
   </html>
