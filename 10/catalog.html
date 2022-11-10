@@ -68,23 +68,23 @@
           <ul class="catalog-filter-list">
             <li class="catalog-filter-item">
              <label class="control">
-              <input type="checkbox" name="swimming-pool" checked>
-              <span class="control-mark-amenity"></span>
-              <span class="control-label">Бассейн</span>
+              <input class="control-input" type="checkbox" name="infrastructure" value="swimming-pool" checked>
+              <span class="control-mark-checkbox"></span>
+              Бассейн
             </label>
             </li>
             <li class="catalog-filter-item">
              <label class="control">
-              <input type="checkbox" name="parking" checked>
-              <span class="control-mark-amenity"></span>
-              <span class="control-label">Парковка</span>
+              <input class="control-input" type="checkbox" name="infrastructure" value="parking" checked>
+              <span class="control-mark-checkbox"></span>
+              Парковка
             </label>
             </li>
             <li class="catalog-filter-item filter-item">
              <label class="control">
-              <input type="checkbox" name="Wi-Fi">
-              <span class="control-mark-amenity"></span>
-              <span class="control-label">Wi-Fi</span>
+              <input class="control-input" type="checkbox" name="infrastructure" value="Wi-Fi">
+              <span class="control-mark-checkbox"></span>
+              Wi-Fi
             </label>
             </li>
           </ul>
@@ -94,29 +94,29 @@
         <ul class="catalog-filter-list">
           <li class="catalog-filter-item">
             <label class="control">
-            <input type="radio" name="product-group" checked>
-            <span class="control-mark"></span>
-            <span class="control-label">Гостиница</span>
+            <input class="radio" type="radio" name="product-group" value="hotel" checked>
+            <span class="control-mark-radio"></span>
+            Гостиница
           </label>
           </li>
           <li class="catalog-filter-item">
             <label class="control">
-            <input type="radio" name="product-group">
-            <span class="control-mark"></span>
-            <span class="control-label">Мотель</span>
+              <input class="radio" type="radio" name="product-group" value="motel" checked>
+              <span class="control-mark-radio"></span>
+            Мотель
           </label>
           </li>
           <li class="catalog-filter-item filter-item">
             <label class="control">
-            <input type="radio" name="product-group">
-            <span class="control-mark"></span>
-            <span class="control-label">Апартаменты</span>
+              <input class="radio" type="radio" name="product-group" value="apartment" checked>
+              <span class="control-mark-radio"></span>
+            Апартаменты
           </label>
           </li>
         </ul>
       </fieldset>
       <fieldset class="catalog-filter-group">
-        <legend class="catalog-filter-title">Стоимость,Р</legend>
+        <legend class="catalog-filter-title">Стоимость, ₽:</legend>
         <div class="range-wrapper-inputs">
          <label class="range-label">
           <span class="range-label-text">от</span>
@@ -128,10 +128,12 @@
          </label>
          <div class="range">
           <div class="range-scale">
-           <div class="range-bar" style="left:61px width=226px">
+           <div class="range-bar">
             <button type="button" class="range-toggle toggle-min">
+              <span class="visually-hidden">Уменьшить стоимость</span>
             </button>
             <button type="button" class="range-toggle toggle-max">
+              <span class="visually-hidden">Увеличить стоимость</span>
             </button>
           </div>
          </div>
@@ -275,7 +277,6 @@
           <p class="hotel-card-rank">Рейтинг:5,0</p>
         </div>
         </ul>
-        <div class="line"></div>
         <ul class="pagination">
           <li class="pagination-item">
             <a class="pagination-link pagination-current">1</a>

@@ -703,61 +703,86 @@ body{
   color: #ffffff;
   list-style-type: none;
   padding-bottom: 16px;
+  padding-left: 16px;
 }
 
 .control{
   position: relative;
   display: block;
   font-weight: 400;
-  color: #ffffff;
-  }
+  padding-left: 36px;
 
-.control-mark-amenity{
+  }
+.control-mark-checkbox {
   position: absolute;
-  left:0;
+  top: 2px;
+  left: 0;
   width: 20px;
   height: 20px;
-}
-.control:hover .control-mark-amenity{
-  opacity: 60%;
-}
-.control:focus .control-mark-amenity{
-  opacity: 30%;
-}
-.control-input:disabled .control-mark-amenity{
-  opacity: 60%;
-}
-.control-mark{
-  position: absolute;
-  left:0;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-}
-.control:hover .control-mark{
-  opacity: 60%;
-}
-.control:focus .control-mark{
-  opacity: 30%;
-}
-.control:disabled .control-mark{
-  opacity: 60%;
-}
-.control-input[type="checkbox"]:focus+ .control-mark{
-  outline: 3px solid #83B3D3;
+  background-color: #ffffff;
   border-radius: 4px;
+  cursor: pointer;
 }
-.control-input[type="radio"]:focus+ .control-mark{
-  outline: 3px solid #83B3D3;
+.control-mark-radio {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
   border-radius: 50%;
 }
-.control-input[type="checkbox"]:active+ .control-mark{
-  outline: none;
+.control-input,
+.radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  border: 0;
+}
+.control-input:hover + .control-mark-checkbox,
+.radio:hover + .control-mark-radio{
+  opacity: 0.5;
+}
+.control-input:focus + .control-mark-checkbox,
+.radio:focus + .control-mark-radio{
+  outline: 3px solid #83B3D3;
+}
+.control-input:active + .control-mark-checkbox,
+.radio:active + .control-mark-radio{
   opacity: 0.3;
 }
-.control-input[type="radio"]:active+ .control-mark{
-  outline: none;
-  opacity: 0.3;
+
+.control-input[type="checkbox"]:checked + .control-mark-checkbox::before{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  content: "";
+  top: 5px;
+  left: 4px;
+  background-image: url(../images/checkmark.svg);
+  background-repeat: no-repeat;
+}
+.radio[type="radio"]:checked + .control-mark-radio::before{
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  content: "";
+  top: 5px;
+  left: 5px;
+  background-image: url(../images/round-radio.svg);
+  background-repeat: no-repeat;
+}
+.control-mark-radio{
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-color: #ffffff;
+  border-radius: 50%;
 }
 .range-label{
   position: relative;
@@ -766,7 +791,7 @@ body{
   position: absolute;
   z-index: 1;
   right: 20px;
-  top: 1px;
+  top: -2px;
 }
 .cost-input{
   width: 143px;
@@ -816,20 +841,21 @@ body{
   position: relative;
   height: 4px;
   margin-top: 48px;
-  background-color: #FFFFFF;
-  /*opacity: 30%;*/
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .range-bar{
   position: absolute;
   height: 4px;
-  background-color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 1);
+  left: 0;
+  width: 220px;
 }
 .range-toggle{
   position: absolute;
   width: 20px;
   height: 20px;
   border-radius: 5px;
-  background: #FFFFFF;
+  color: #FFFFFF;
   cursor: pointer;
 }
 .range-toggle:focus{
@@ -847,7 +873,7 @@ body{
 }
 .toggle-max{
   top: -8px;
-  left: 226px;
+  left: 220px;
 }
 .hotel-price{
   color: #ffffff;
@@ -876,7 +902,12 @@ body{
   font-size: 18px;
   font-weight: 400;
   line-height: 21px;
-  border: 2px solid #E5E5E5;
+  outline: 2px solid #E5E5E5;
+  padding-left: 20px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  border: none;
+  border-radius: 4px;
 
 }
 .select-control:hover{
@@ -953,12 +984,10 @@ body{
   align-items: center;
   gap: 20px;
   margin-bottom: 40px;
-}
-.line{
   border-bottom: 1px solid #E6E6E6;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
+
 .hotel-card{
   display: flex;
   flex-wrap: wrap;
@@ -1152,24 +1181,22 @@ body{
   height: 100%;
 }
 .modal-container-close{
-  display: none;
+  /*display: none;*/
 }
 .modal{
-  display: flex;
-  justify-content: center;
-  margin-top: 396px;
-  margin-left: 281px;
+  margin: auto;
   width: 717px;
   height: 576px;
-  border: ;
   background-color: #FFFFFF;
   position: relative;
   border-radius: 30px;
   /*min-height: 348px;*/
 }
 .modal-close-button{
-  background-image: url(../images/modal-close.svg);
-  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   width: 52px;
   height: 52px;
   position: absolute;
@@ -1178,6 +1205,20 @@ body{
   border: none;
   border-radius: 50%;
   cursor: pointer;
+  color: #000000;
+  background-color: #F2F2F2;
+}
+.modal-close-button:hover {
+  color: #000000;
+  background-color: #E6E6E6;
+}
+.modal-close-button:active {
+  background-color: #E6E6E6;
+  opacity: 0.3;
+}
+.modal-close-button:focus {
+  border: 3px solid rgba(131, 179, 211, 1);
+  background-color: #E6E6E6;
 }
 .modal-content{
   margin: 64px 70px;
@@ -1215,21 +1256,30 @@ body{
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  background-color: #83B3D3;
+  background-color: rgba(131, 179, 211, 1);
   color: #F2F2F2;
   text-transform: uppercase;
   height: 60px;
   border-radius: 10px;
   border: none;
 }
+.search-form-button:hover {
+  background-color: rgba(104, 162, 202, 1);
+}
+.search-form-button:focus {
+  background-color: ;
+}
+.search-form-button:active{
+  background-color: rgba(104, 162, 202, 1);
+  color: #FFFFFF 0.3;
+}
+
 .date-label{
   display: flex;
   min-width: 113px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  padding-top: 12px;
-  padding-bottom: 12px;
 }
 .field{
   border: none;
@@ -1251,8 +1301,35 @@ body{
   background-repeat: no-repeat;
   background-position: top 55% right 5%;
   background-color: #F2F2F2;
+  border: none;
 }
-
+.label-email:hover,
+.arrival-date-input:hover,
+.departure-date-input:hover,
+.amount-form-field:hover {
+  background-color: #E6E6E6;
+}
+.label-email:focus,
+.arrival-date-input:focus,
+.departure-date-input:focus,
+.amount-form-field:focus {
+   background-color: #E6E6E6;
+   outline: 3px solid rgba(131, 179, 211, 1);
+}
+.label-email:not(:placeholder-shown),
+.arrival-date-input:not(:placeholder-shown),
+.departure-date-input:not(:placeholder-shown),
+.amount-form-field:not(:placeholder-shown) {
+   background-color: #F2F2F2;
+   outline: 2px solid transparent;
+}
+.label-email:focus:not(:placeholder-shown),
+.arrival-date-input:focus:not(:placeholder-shown),
+.departure-date-input:focus:not(:placeholder-shown),
+.amount-form-field:focus:not(:placeholder-shown) {
+   background-color: #F2F2F2;
+   outline-color: #000000;
+}
 .error-message {
   margin-left: 137px;
   padding: 3px 0;
@@ -1263,22 +1340,22 @@ body{
   padding: 3px 0;
   color: rgba(51, 51, 51, 1);
 }
-.calendar{
+.calendar {
   position: absolute;
   top: 0;
   right: 10px;
   width: 20px;
   height: 20px;
 }
-.quantity{
+.quantity {
   position: relative;
 }
-.guest-form{
+.guest-form {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.adults{
+.adults {
   display: flex;
   min-width: 91px;
   font-size: 20px;
@@ -1287,7 +1364,7 @@ body{
   padding-top: 12px;
   padding-bottom: 12px;
 }
-.children{
+.children {
   display: flex;
   min-width: 85px;
   font-size: 20px;
@@ -1301,27 +1378,56 @@ body{
   width: 110px;
   padding: 14px 50px;
   background-color: #F2F2F2;
+  color: #000000;
+  border-radius: 4px;
 }
 .search-button-min{
-  background-image: url(../images/button-minus.svg);
+  display: flex;
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 12px;
+  top: 15px;
   left: 140px;
+  border: none;
+  color: rgba(117, 97, 87, 0.3)
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.search-button-min:hover,
+.search-button-max:hover{
+  color: #000000;
+}
+.search-button-min:focus,
+.search-button-max:focus{
+  color: #000000;
+  outline: 3px solid rgba(130, 179, 211, 1);
+  border-radius: 4px;
+}
+.search-button-min:active,
+.search-button-max:active{
+  opacity: 0.2;
+  color: #000000;
 }
 .search-button-max{
-  background-image: url(../images/button-plus.svg);
+  display: flex;
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 12px;
-  right: 10px;
+  top: 15px;
+  right: 20px;
+  border: none;
+  color: rgba(117, 97, 87, 0.3);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .tooltip {
   position: absolute;
-  margin-left: 50px;
+  margin-left: 59px;
   margin-top: -40px;
   width: 26px;
   height: 26px;
@@ -1354,8 +1460,8 @@ body{
   position: absolute;
   transform: translateX(-50%);
   display: none;
-  top: 50px;
-  left: 20px;
+  top: 40px;
+  left: 10px;
 }
 .tooltip-text::before {
   content:'';
@@ -1363,8 +1469,9 @@ body{
   width: 19px;
   height: 9px;
   position:absolute;
-  left:20px;
-  top:40px;
+  left:0;
+  right: 0;
+  bottom:100%;
   margin-left: auto;
   margin-right: auto;
 }
