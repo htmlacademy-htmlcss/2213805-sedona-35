@@ -54,7 +54,7 @@ body {
   text-align: justify;
   text-decoration: none;
   margin: 0 70px;
-  width: 1200px;
+  width: 1060px;
   min-height: 64px;
 }
 
@@ -176,6 +176,7 @@ body {
 
 .button-brown:active {
   background-color: rgba(117, 97, 87, 1);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-brown:disabled {
@@ -183,7 +184,7 @@ body {
 }
 
 .visually-hidden {
-  position:absolute;
+  position: absolute;
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -234,7 +235,7 @@ body {
   content: "";
 }
 
-.main-index-picture{
+.main-index-picture {
   margin-bottom: 20px;
 }
 
@@ -398,6 +399,7 @@ body {
 .services {
   display: block;
 }
+
 .services-list {
   display: flex;
   flex-wrap: wrap;
@@ -426,12 +428,7 @@ body {
   margin-bottom: 31px;
 }
 
-.service-description {
-  font-family: "PT Sans",
-  sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
+.services-description {
   color: rgba(51, 51, 51, 1);
   margin: 0;
 }
@@ -589,10 +586,9 @@ body {
   border: none;
   cursor: pointer;
   vertical-align: middle;
-  background-color: rgb(130, 179, 211);;
+  background-color: rgb(130, 179, 211);
   color: #ffffff;
   width: 232px;
-  height: 52px;
   margin: 0;
   padding: 8px 50px;
   border-bottom-right-radius: 4px;
@@ -650,11 +646,11 @@ body {
 
 .button-green:focus {
   background-color:#6C9E42;
-  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-green:active {
   background-color: #7DB54F;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-green:disabled {
@@ -1242,7 +1238,6 @@ body {
   outline: 1px solid #E6E6E6;
   margin: 0;
   border-radius: 4px;
-  height: 438px;
 }
 
 .hotel-card-column {
@@ -1408,6 +1403,7 @@ body {
   text-align: center;
   box-sizing: border-box;
   border-radius: 4px;
+  text-decoration: none;
 }
 
 .pagination-current {
@@ -1422,18 +1418,19 @@ body {
 }
 
 .pagination-link-choice {
-  background-color:#82B3D3;
-  color: #ffffff;
+  background-color: rgba(130,179,211);
+  color: rgba(255, 255, 255, 1);
+}
+
+.pagination-link-choice:hover,
+.pagination-link-choice:focus {
+  background-color: rgba(104,162,202);
+  border: 1px solid rgba(130, 179, 211, 1);
 }
 
 .pagination-link-choice:active {
-  background-color: #82B3D3;
+  background-color: rgba(130,179,211);
   color: rgba(255, 255, 255, 0.3);
-}
-
-.pagination-link-choice:hover {
-  background-color: #68A2CA;
-  color: #ffffff;
 }
 
 .pagination-next {
@@ -1472,7 +1469,7 @@ body {
 .modal {
   margin: auto;
   height: 576px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   position: relative;
   border-radius: 30px;
   padding: 64px 70px 55px;
@@ -1480,7 +1477,7 @@ body {
 }
 
 .modal-search {
-  width: 717px;
+  width: 716px;
   box-sizing: border-box;
 }
 
@@ -1492,12 +1489,13 @@ body {
   width: 52px;
   height: 52px;
   position: absolute;
-  right: 70px;
+  right: 52px;
   top: 64px;
   border: none;
   border-radius: 50%;
   cursor: pointer;
   background-color: #f2f2f2;
+  padding: 0;
 }
 
 .close-icon {
@@ -1520,6 +1518,7 @@ body {
 }
 
 .modal-title {
+  font-family: "PT Sans", sans-serif;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -1581,9 +1580,8 @@ body {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  text-transform: capitalize;
-  align-self: baseline;
-  padding: 12px 0;
+  padding-top: 12px;
+  padding-left: 0;
 }
 
 .date-label-arrival {
@@ -1592,6 +1590,8 @@ body {
 
 .date-label-departure {
   margin-right: 16px;
+  padding-top: 12px;
+  min-width: 119px;
 }
 
 .field {
@@ -1645,14 +1645,18 @@ body {
 .arrival-date-input:focus:not(:placeholder-shown),
 .departure-date-input:focus:not(:placeholder-shown),
 .amount-form-field:focus:not(:placeholder-shown) {
-   background-color: #F2F2F2;
-   outline-color: #000000;
+  background-color: #F2F2F2;
+  outline-color: #000000;
 }
 
 .error-message {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
   margin-left: 137px;
   padding: 3px 0;
   color: rgba(255, 87, 87, 1);
+  padding-left: 15px;
 }
 
 .confirm-message {
