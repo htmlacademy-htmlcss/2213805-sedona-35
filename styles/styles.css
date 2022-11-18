@@ -1523,8 +1523,9 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 0;
+  margin: 0;
   margin-bottom: 64px;
+  color: #000000;
 }
 
 .search-form {
@@ -1559,6 +1560,7 @@ body {
   height: 60px;
   border-radius: 10px;
   border: none;
+  margin-top: 15px;
 }
 
 .search-form-button:hover {
@@ -1586,11 +1588,12 @@ body {
 
 .date-label-arrival {
   margin-right: 24px;
+  padding-bottom: 10px;
 }
 
 .date-label-departure {
   margin-right: 16px;
-  padding-top: 12px;
+  padding-top: 8px;
   min-width: 119px;
 }
 
@@ -1618,6 +1621,10 @@ body {
   border: none;
 }
 
+.departure-date-input {
+  margin-top: 10px;
+}
+
 .label-email:hover,
 .arrival-date-input:hover,
 .departure-date-input:hover,
@@ -1629,7 +1636,7 @@ body {
 .arrival-date-input:focus,
 .departure-date-input:focus,
 .amount-form-field:focus {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
   outline: 3px solid rgba(131, 179, 211, 1);
 }
 
@@ -1657,12 +1664,17 @@ body {
   padding: 3px 0;
   color: rgba(255, 87, 87, 1);
   padding-left: 15px;
+  margin-top: 4px;
 }
 
 .confirm-message {
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
   margin-left: 137px;
-  padding: 3px 0;
-  color: rgba(51, 51, 51, 1);
+  padding: 3px 20px;
+  color: rgb(51, 51, 51);
+  margin-top: 4px;
 }
 
 .calendar {
@@ -1710,6 +1722,7 @@ body {
   background-color: #F2F2F2;
   color: #000000;
   border-radius: 4px;
+  margin-top: 5px;
 }
 
 .search-button-min {
@@ -1717,8 +1730,8 @@ body {
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 15px;
-  left: 140px;
+  top: 16px;
+  left: 143px;
   border: none;
   color: rgba(117, 97, 87, 0.3);
   align-items: center;
@@ -1749,8 +1762,8 @@ body {
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 15px;
-  right: 20px;
+  top: 17px;
+  right: 10px;
   border: none;
   color: rgba(117, 97, 87, 0.3);
   padding: 0;
