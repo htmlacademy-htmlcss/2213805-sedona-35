@@ -1610,6 +1610,10 @@ body {
 }
 
 .data-field {
+  font: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
   width: 440px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -1617,7 +1621,6 @@ body {
   background-image: url(../images/calendar-icon.svg);
   background-repeat: no-repeat;
   background-position: top 55% right 5%;
-  background-color: #F2F2F2;
   border: none;
 }
 
@@ -1629,17 +1632,25 @@ body {
 .arrival-date-input:hover,
 .departure-date-input:hover,
 .amount-form-field:hover {
-  background-color: #E6E6E6;
+  background-color: rgba(230, 230, 230, 1);
 }
 
 .label-email:focus,
 .arrival-date-input:focus,
 .departure-date-input:focus,
 .amount-form-field:focus {
-  background-color: #e6e6e6;
+  background-color: rgba(230, 230, 230, 1);
   outline: 3px solid rgba(131, 179, 211, 1);
 }
 
+.label-email:active,
+.arrival-date-input:active,
+.departure-date-input:active,
+.amount-form-field:active {
+  outline: 2px solid #000000;
+}
+
+/*
 .label-email:not(:placeholder-shown),
 .arrival-date-input:not(:placeholder-shown),
 .departure-date-input:not(:placeholder-shown),
@@ -1655,6 +1666,7 @@ body {
   background-color: #F2F2F2;
   outline-color: #000000;
 }
+*/
 
 .error-message {
   font-size: 16px;
@@ -1730,7 +1742,7 @@ body {
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 16px;
+  top: 20px;
   left: 143px;
   border: none;
   color: rgba(117, 97, 87, 0.3);
@@ -1744,6 +1756,7 @@ body {
 .search-button-max:hover {
   color: #000000;
 }
+
 .search-button-min:focus,
 .search-button-max:focus {
   color: #000000;
@@ -1762,7 +1775,7 @@ body {
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 17px;
+  top: 20px;
   right: 10px;
   border: none;
   color: rgba(117, 97, 87, 0.3);
