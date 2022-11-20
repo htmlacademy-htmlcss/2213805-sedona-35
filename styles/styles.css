@@ -324,7 +324,7 @@ body {
   content: "";
   order: 1;
   background-color: rgba(255, 255, 255, 0.3);
-  ;
+  margin-top: -30px;
 }
 
 .advantages-title {
@@ -1829,7 +1829,8 @@ body {
   line-height: 20px;
   font-weight: 400;
   color: #ffffff;
-  padding: 15px 18px 18px 22px;
+  background-color: #000000;
+  padding: 20px 18px 18px 22px;
   border-radius: 10px;
   text-transform: none;
   width: 216px;
